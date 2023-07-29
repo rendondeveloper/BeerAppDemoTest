@@ -1,4 +1,4 @@
-package com.rendonsoft.beeradddemotest
+package com.rendonsoft.beerappdemotest
 
 import org.junit.Test
 

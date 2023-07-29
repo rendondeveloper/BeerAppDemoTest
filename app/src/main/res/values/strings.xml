@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">BeerAddDemoTest</string>
+    <string name="app_name">BeerAppDemoTest</string>
+    <string name="app_screen">Beer Demo</string>
 </resources>

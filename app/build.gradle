@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.rendonsoft.beeradddemotest'
+    namespace 'com.rendonsoft.beerappdemotest'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.rendonsoft.beeradddemotest"
+        applicationId "com.rendonsoft.beerappdemotest"
         minSdk 21
         targetSdk 33
         versionCode 1

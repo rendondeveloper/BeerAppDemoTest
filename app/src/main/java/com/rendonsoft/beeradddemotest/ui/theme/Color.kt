@@ -1,4 +1,4 @@
-package com.rendonsoft.beeradddemotest.ui.theme
+package com.rendonsoft.beerappdemotest.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

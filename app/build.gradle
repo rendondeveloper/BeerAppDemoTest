@@ -68,6 +68,9 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
     def room_version = "2.5.2"
+    def retrofit_version = "2.9.0"
+    def coroutines_retrofit_version = "0.9.2"
+    def gson_version= "2.9.0"
 
     //Room
     implementation("androidx.room:room-runtime:$room_version")
@@ -78,5 +81,14 @@ dependencies {
 
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
+
+    //gson
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$coroutines_retrofit_version"
 
 }

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BeerAppDemoTest</string>
     <string name="app_screen">Beer Demo</string>
+    <string name="home_toolbar_name">Beers</string>
 </resources>

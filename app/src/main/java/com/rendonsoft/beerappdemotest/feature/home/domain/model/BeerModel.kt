@@ -1,0 +1,1 @@
+package com.rendonsoft.beerappdemotest.feature.home.domain.modeldata class BeerModel(        val id: Int,        val imageUrl: String? = null,        val name: String,        val tagLine: String,        val firstBrewed: String,        val contributedBy: String,)

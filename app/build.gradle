@@ -74,6 +74,7 @@ dependencies {
     def coroutines_retrofit_version = "0.9.2"
     def gson_version= "2.9.0"
     def coil_version= "2.4.0"
+    def koin_version= "3.4.0"
 
     //Room
     implementation("androidx.room:room-runtime:$room_version")
@@ -96,4 +97,9 @@ dependencies {
 
     //Coil Image
     implementation("io.coil-kt:coil-compose:$coil_version")
+
+    // Koin Core features
+    implementation("io.insert-koin:koin-core:$koin_version")
+    implementation("io.insert-koin:koin-android:$koin_version")
+    testImplementation("io.insert-koin:koin-test:$koin_version")
 }

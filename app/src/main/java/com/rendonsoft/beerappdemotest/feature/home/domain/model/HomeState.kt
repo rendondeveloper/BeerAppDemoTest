@@ -1,0 +1,1 @@
+package com.rendonsoft.beerappdemotest.feature.home.domain.modelsealed interface HomeState {}

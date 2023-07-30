@@ -2,4 +2,6 @@
     <string name="app_name">BeerAppDemoTest</string>
     <string name="app_screen">Beer Demo</string>
     <string name="home_toolbar_name">Beers</string>
+    <string name="home_empty_title">Upps!.</string>
+    <string name="home_empty_message">Parece que no hay cervecitas, refresca la pantalla e intentalo nuevamente.</string>
 </resources>

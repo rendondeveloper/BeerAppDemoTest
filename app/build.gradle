@@ -55,7 +55,7 @@ dependencies {
     def coil_version= "2.4.0"
     def koin_version= "3.4.0"
     def interceptor_version = "4.9.3"
-
+    def material_version = "1.4.3"
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
@@ -76,6 +76,9 @@ dependencies {
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    //Material
+    implementation "androidx.compose.material:material:$material_version"
 
     //Room
     implementation("androidx.room:room-runtime:$room_version")

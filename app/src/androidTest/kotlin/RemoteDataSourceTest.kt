@@ -38,7 +38,7 @@ class RemoteDataSourceTest {
             image_url = "https://images.punkapi.com/v2/keg.png",
             brewers_tips = "The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.",
             contributed_by = "Sam Mason <samjbmason>",
-            attenuation_level = 76
+            attenuation_level = 76.0
     )
 
     @After
@@ -58,7 +58,7 @@ class RemoteDataSourceTest {
         mockWebServer.enqueue(mockResponse)
         runBlocking {
             val beersData = network.getBeersAsync(0).await()
-            assertEquals(beersData.body()!!.beers.size, response.beers.size)
+            assertEquals(beersData.body()!!.size, response.beers.size)
         }
     }
 
@@ -77,7 +77,7 @@ class RemoteDataSourceTest {
         mockWebServer.enqueue(mockResponse)
         runBlocking {
             val beersData = network.getBeersAsync(0).await()
-            assertEquals(beersData.body()!!.beers.size, response.beers.size)
+            assertEquals(beersData.body()!!.size, response.beers.size)
         }
     }
 

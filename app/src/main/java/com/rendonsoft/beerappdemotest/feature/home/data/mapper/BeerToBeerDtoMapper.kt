@@ -14,7 +14,7 @@ class BeerToBeerDtoMapper : Mapper<Beer, BeerDto> {
                 name = input.name ?: "",
                 tagline = input.tagline ?: "",
                 first_brewed = input.first_brewed ?: "",
-                attenuation_level = input.attenuation_level ?: 0,
+                attenuation_level = input.attenuation_level?.toInt() ?: 0,
                 brewers_tips = input.brewers_tips ?: "",
                 description = input.description ?: "",
                 contributed_by = input.contributed_by ?: "",

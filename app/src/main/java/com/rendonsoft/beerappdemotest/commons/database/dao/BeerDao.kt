@@ -18,7 +18,7 @@ interface BeerDao {
     fun getBeersById(id: Int): BeerDto
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertBeer(vararg users: BeerDto)
+    fun insertBeer(vararg beers: BeerDto)
 
     @Query("DELETE FROM Beer")
     fun deleteBeers()

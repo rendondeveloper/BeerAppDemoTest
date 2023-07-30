@@ -48,6 +48,14 @@ android {
 }
 
 dependencies {
+    def room_version = "2.5.2"
+    def retrofit_version = "2.9.0"
+    def coroutines_retrofit_version = "0.9.2"
+    def gson_version= "2.9.0"
+    def coil_version= "2.4.0"
+    def koin_version= "3.4.0"
+    def interceptor_version = "4.9.3"
+
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
@@ -69,13 +77,6 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
-    def room_version = "2.5.2"
-    def retrofit_version = "2.9.0"
-    def coroutines_retrofit_version = "0.9.2"
-    def gson_version= "2.9.0"
-    def coil_version= "2.4.0"
-    def koin_version= "3.4.0"
-
     //Room
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
@@ -94,6 +95,9 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
     implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$coroutines_retrofit_version"
+
+    //http
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptor_version"
 
     //Coil Image
     implementation("io.coil-kt:coil-compose:$coil_version")

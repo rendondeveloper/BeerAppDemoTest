@@ -1,0 +1,1 @@
+package com.rendonsoft.beerappdemotest.feature.detail.data.dataSourceimport com.rendonsoft.beerappdemotest.feature.detail.domain.BeerDetailModelinterface DetailBeerDataSource {    suspend fun getBeerById(beerId: Int): BeerDetailModel}

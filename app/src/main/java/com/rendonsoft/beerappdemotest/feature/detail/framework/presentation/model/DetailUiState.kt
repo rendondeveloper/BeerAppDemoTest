@@ -1,0 +1,1 @@
+package com.rendonsoft.beerappdemotest.feature.detail.framework.presentation.modelimport com.rendonsoft.beerappdemotest.feature.detail.domain.BeerDetailModelsealed interface DetailUiState {    object Loading : DetailUiState    data class Data(val beer: BeerDetailModel) : DetailUiState}

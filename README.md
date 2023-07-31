@@ -13,8 +13,9 @@ Database: ROOM
 Api: Retrofit
 Remote image : Coil
 
-## Before save data
-<img src="https://github.com/rendondeveloper/BeerAppDemoTest/assets/42813444/29810bb2-d6d1-4cb5-8f64-dc9fa2bf1d76" width="40%"/>
+## Fail operation By Internet 
+<img src="https://github.com/rendondeveloper/BeerAppDemoTest/assets/42813444/ba30dfbf-2989-4ad8-8b26-e97ed8f1ef63" width="40%"/>
 
-## After save data
-<img src="https://github.com/rendondeveloper/BeerAppDemoTest/assets/42813444/ccf6b39e-91ad-4b25-8fbf-4c2a0465c919" width="40%"/>
+## Success operation
+<img src="https://github.com/rendondeveloper/BeerAppDemoTest/assets/42813444/9491a635-18e6-419a-b474-81973d1b7b13" width="40%"/>
+

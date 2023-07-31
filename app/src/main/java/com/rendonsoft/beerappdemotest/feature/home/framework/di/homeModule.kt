@@ -8,7 +8,6 @@ import com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data
 import com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.dataSource.local.mapper.BeerDtoToBeerModelMapper
 import com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.dataSource.remote.HomeBeerRemoteDataSourceImpl
 import com.rendonsoft.beerappdemotest.feature.home.framework.presentation.viewModel.HomeViewModel
-import com.rendonsoft.beerappdemotest.feature.home.useCases.GetBeerByIdUsesCase
 import com.rendonsoft.beerappdemotest.feature.home.useCases.GetBeersByPageUsesCase
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -38,10 +37,6 @@ val homeModule = module {
 
     factory {
         HomeBeerRepository(get(), get(), get())
-    }
-
-    factory {
-        GetBeerByIdUsesCase(get())
     }
 
     factory {

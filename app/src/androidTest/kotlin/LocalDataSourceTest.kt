@@ -3,15 +3,18 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.rendonsoft.beerappdemotest.commons.database.database.AppDataBase
 import com.rendonsoft.beerappdemotest.commons.database.models.BeerDto
+import com.rendonsoft.beerappdemotest.feature.detail.data.dataSource.DetailBeerDataSource
+import com.rendonsoft.beerappdemotest.feature.detail.framework.implementation.data.dataSource.DetailBeerLocalDataSourceImpl
+import com.rendonsoft.beerappdemotest.feature.detail.framework.implementation.data.dataSource.mapper.BeerDtoToBeerDetailModelMapper
 import com.rendonsoft.beerappdemotest.feature.home.data.dataSource.HomeBeerLocalDataSource
 import com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.dataSource.local.HomeBeerLocalDataSourceImpl
 import com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.dataSource.local.mapper.BeerDtoToBeerModelMapper
 import java.io.IOException
 import kotlinx.coroutines.runBlocking
 import org.junit.After
-import org.junit.Test
 import org.junit.Assert.*
 import org.junit.Before
+import org.junit.Test
 import org.junit.runner.RunWith
 
 /**
@@ -24,6 +27,7 @@ class LocalDataSourceTest {
 
     private lateinit var dataBase: AppDataBase
     private lateinit var homeBeerLocalDataSource: HomeBeerLocalDataSource
+    private lateinit var detailBeerDataSource: DetailBeerDataSource
 
     private val beer = BeerDto(
             id = 0,
@@ -52,6 +56,7 @@ class LocalDataSourceTest {
         ).allowMainThreadQueries().build()
 
         homeBeerLocalDataSource = HomeBeerLocalDataSourceImpl(dataBase.beerDao(), BeerDtoToBeerModelMapper())
+        detailBeerDataSource = DetailBeerLocalDataSourceImpl(dataBase.beerDao(), BeerDtoToBeerDetailModelMapper())
     }
 
     @After
@@ -98,8 +103,7 @@ class LocalDataSourceTest {
     @Test
     fun dao_Insert_Beers_By_Beer_Id() = runBlocking {
         insertNewPageBeers(3)
-        val beerData = homeBeerLocalDataSource.getBeerById(0)
+        val beerData = detailBeerDataSource.getBeerById(0)
         assertEquals(beerData.id, beers.first().id)
     }
-
 }

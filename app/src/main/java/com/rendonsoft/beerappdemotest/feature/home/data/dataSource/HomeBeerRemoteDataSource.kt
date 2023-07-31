@@ -1,1 +1,1 @@
-package com.rendonsoft.beerappdemotest.feature.home.data.dataSourceimport com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.config.response.Beerinterface HomeBeerRemoteDataSource {    suspend fun getBeerByPage(page : Int) : List<Beer>}
+package com.rendonsoft.beerappdemotest.feature.home.data.dataSourceimport com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.config.response.Beerinterface HomeBeerRemoteDataSource {    suspend fun getBeerByPage(page: Int, pageSize: Int): List<Beer>}

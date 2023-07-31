@@ -3,14 +3,11 @@ import com.google.gson.Gson
 import com.rendonsoft.beerappdemotest.commons.network.Network
 import com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.api.BeerApi
 import com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.config.response.Beer
-import com.rendonsoft.beerappdemotest.feature.home.framework.implementation.data.config.response.BeerResponse
-import java.io.IOException
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Assert.*
-import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -43,7 +40,7 @@ class RemoteDataSourceTest {
 
     @Test
     fun get_Remote_One_Beer() {
-        val response = BeerResponse(beers = arrayListOf(beer))
+        val response = arrayListOf(beer)
         mockResponse = MockResponse()
         mockResponse.setBody(Gson().toJson(response))
         network = Network(url = mockWebServer.url("/").toString())
@@ -52,17 +49,19 @@ class RemoteDataSourceTest {
 
         mockWebServer.enqueue(mockResponse)
         runBlocking {
-            val beersData = network.getBeersAsync(0).await()
-            assertEquals(beersData.body()!!.size, response.beers.size)
+            val beersData = network.getBeersAsync(0, 5).await()
+            assertEquals(beersData.body()!!.size, response.size)
         }
     }
 
     @Test
     fun get_Remote_List_Beer() {
-        val response = BeerResponse(beers = arrayListOf( beer,
+        val response = arrayListOf(
+                beer,
                 beer.copy(id = 1),
                 beer.copy(id = 2),
-                beer.copy(id = 3),))
+                beer.copy(id = 3),
+        )
         mockResponse = MockResponse()
         mockResponse.setBody(Gson().toJson(response))
         network = Network(url = mockWebServer.url("/").toString())
@@ -71,8 +70,8 @@ class RemoteDataSourceTest {
 
         mockWebServer.enqueue(mockResponse)
         runBlocking {
-            val beersData = network.getBeersAsync(0).await()
-            assertEquals(beersData.body()!!.size, response.beers.size)
+            val beersData = network.getBeersAsync(0, 5).await()
+            assertEquals(beersData.body()!!.size, response.size)
         }
     }
 

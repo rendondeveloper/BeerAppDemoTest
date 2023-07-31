@@ -4,9 +4,10 @@
     <string name="home_toolbar_name">Beers</string>
     <string name="home_toolbar_detail">Detalle</string>
     <string name="home_empty_title">Upps!.</string>
-    <string name="home_empty_message">Parece que no hay cervecitas, refresca la pantalla e intentalo nuevamente.</string>
+    <string name="home_empty_message">Parece que no hay cervecitas, intentalo mas tarde.</string>
     <string name="detail_description">Description:</string>
     <string name="detail_tag_line">Tag Line:</string>
     <string name="detail_attenuation_level">Attenuation Level:</string>
     <string name="detail_contributed_by">Contributed by:</string>
+    <string name="button_re_try">Reintentar</string>
 </resources>

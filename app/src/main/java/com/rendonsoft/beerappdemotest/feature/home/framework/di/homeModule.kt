@@ -27,7 +27,7 @@ val homeModule = module {
 
     factory<HomeBeerRemoteDataSource> {
         HomeBeerRemoteDataSourceImpl(
-                get(),
+                get()
         )
     }
 
@@ -39,6 +39,9 @@ val homeModule = module {
         HomeBeerRepository(get(), get(), get())
     }
 
+    factory {
+        GetBeersByPageUsesCase(get())
+    }
     factory {
         GetBeersByPageUsesCase(get())
     }
